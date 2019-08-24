@@ -43,7 +43,6 @@ public abstract class Figure implements Colored, HasArea {
         return color;
     }
 
-    //REVU: можно ли один из методов isInside сделать не абстрактным?
     public abstract boolean isInside(Point2D point2D);
 
     public abstract boolean isInside(int x, int y);
