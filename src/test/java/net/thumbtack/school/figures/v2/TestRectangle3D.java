@@ -201,4 +201,10 @@ public class TestRectangle3D {
         assertEquals(10000, rect3D2.getVolume(), DOUBLE_EPS);
     }
 
+    @Test
+    public void testRectangle3D() {
+        Rectangle3D rectangle3D = new Rectangle3D(1);
+        rectangle3D.setHeight(10);
+        assertEquals(10, rectangle3D.getHeight());
+    }
 }

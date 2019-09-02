@@ -237,4 +237,10 @@ public class TestCylinder {
         assertNotEquals(cylinder1, cylinder4);
     }
 
+    @Test
+    public void testCylinderSetHeight() throws ColorException {
+        Cylinder cylinder = new Cylinder(Color.BLUE);
+        cylinder.setHeight(10);
+        assertEquals(10,cylinder.getHeight());
+    }
 }

@@ -36,7 +36,6 @@ public class Triangle {
         this.point3 = point;
     }
 
-    // REVU: private
     public double getSide (Point2D firstPoint, Point2D secondPoint) {
         int x = secondPoint.getX() - firstPoint.getX();
         int y = secondPoint.getY() - firstPoint.getY();

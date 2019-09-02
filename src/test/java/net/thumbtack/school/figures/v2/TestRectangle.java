@@ -188,4 +188,13 @@ public class TestRectangle {
         assertEquals(140, rect2.getPerimeter(), DOUBLE_EPS);
     }
 
+    @Test
+    public void testRectangleSetTopLeft() {
+        Point2D topleft = new Point2D(10,20);
+        Rectangle rectangle = new Rectangle(1);
+        rectangle.setTopLeft(topleft);
+        assertEquals(10, rectangle.getTopLeft().getX());
+        assertEquals(20,rectangle.getTopLeft().getY());
+    }
+
 }

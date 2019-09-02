@@ -54,7 +54,7 @@ public class Rectangle {
     }
 
     public void enlarge(int nx, int ny) {
-        setBottomRight(new Point2D(leftTop.getX() + getLength()*nx, leftTop.getY() + getWidth()* ny));
+        setBottomRight(new Point2D(leftTop.getX() + getLength() * nx, leftTop.getY() + getWidth() * ny));
     }
 
     public double getArea() {

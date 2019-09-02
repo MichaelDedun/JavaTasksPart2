@@ -295,4 +295,12 @@ public class TestRectangle {
         assertEquals(140, rect2.getPerimeter(), DOUBLE_EPS);
     }
 
+    @Test
+    public void testRectagleSetTopLeft() throws ColorException {
+        Rectangle rectangle = new Rectangle(Color.BLUE);
+        Point2D topleft = new Point2D(10,20);
+        rectangle.setTopLeft(topleft);
+        assertEquals(10,rectangle.getTopLeft().getX());
+        assertEquals(20,rectangle.getTopLeft().getY());
+    }
 }

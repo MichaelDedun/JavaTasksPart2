@@ -12,10 +12,7 @@ public class Car implements Colored {
     private Color color;
 
     public Car(String model, int weight, int maxSpeed, String color) throws ColorException {
-        this.model = model;
-        this.weight = weight;
-        this.maxSpeed = maxSpeed;
-        setColor(color);
+        this(model,weight,maxSpeed,Color.colorFromString(color));
     }
 
     public Car(String model, int weight, int maxSpeed, Color color) throws ColorException {
