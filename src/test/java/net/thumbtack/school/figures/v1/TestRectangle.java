@@ -173,4 +173,20 @@ public class TestRectangle {
         assertEquals(140, rect2.getPerimeter(), DOUBLE_EPS);
     }
 
+    @Test
+    public void testRectangleSetTopLeft() {
+        Point2D topLeft = new Point2D(10, 20);
+        Rectangle rectangle = new Rectangle();
+        rectangle.setTopLeft(topLeft);
+        assertEquals(10,rectangle.getTopLeft().getX());
+        assertEquals(20,rectangle.getTopLeft().getY());
+    }
+
+    @Test
+    public void testRectangle3dSetHeight() {
+        Rectangle3D rectangle3D = new Rectangle3D();
+        rectangle3D.setHeight(10);
+        assertEquals(10, rectangle3D.getHeight());
+    }
+
 }

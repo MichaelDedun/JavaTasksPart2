@@ -17,7 +17,7 @@ public abstract class Figure implements Colored, HasArea {
     }
 
     public Figure(String color) throws ColorException {
-        setColor(color);
+        this(Color.colorFromString(color));
     }
 
     public abstract double getArea();

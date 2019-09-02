@@ -142,4 +142,20 @@ public class TestCircle {
         assertEquals(3, CircleFactory.getCircleCount());
     }
 
+    @Test
+    public void testCircleSetRadius() {
+        Circle circle = new Circle(1,1);
+        circle.setRadius(10);
+        assertEquals(10, circle.getRadius());
+    }
+
+    @Test
+    public void testCircleFactoryReset() {
+        Circle circle1 = CircleFactory.createCircle(new Point2D(0, 0), 1, 1);
+        Circle circle2 = CircleFactory.createCircle(new Point2D(3, 4), 1, 1);
+        Circle circle3 = CircleFactory.createCircle(new Point2D(10, 20), 1, 1);
+        CircleFactory.reset();
+        assertEquals(0, CircleFactory.getCircleCount());
+    }
+
 }

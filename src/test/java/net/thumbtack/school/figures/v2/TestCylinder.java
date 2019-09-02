@@ -139,4 +139,11 @@ public class TestCylinder {
         assertNotEquals(cylinder1, cylinder4);
     }
 
+    @Test
+    public void testCylinderSetHeight() {
+        Cylinder cylinder = new Cylinder(1);
+        cylinder.setHeight(20);
+        assertEquals(20, cylinder.getHeight());
+    }
+
 }

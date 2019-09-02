@@ -167,10 +167,50 @@ public class TestBox {
         assertEquals("Very good rect", rectBox.getName());
     }
 
-/*	
-	@Test
-	public void testMustNotBeCompiled() {
-		Box<String> stringBox = new Box<>("My String");
-	}
-*/
+    @Test
+    public void testSetNamedBox() throws ColorException {
+        Point2D topLeft = new Point2D(10, 20);
+        Point2D bottomRight = new Point2D(30, 40);
+        Rectangle rect = new Rectangle(topLeft, bottomRight, Color.BLUE);
+        NamedBox<Rectangle> rectBox = new NamedBox<>(rect, "Very good rect");
+        assertEquals("Very good rect", rectBox.getName());
+        rectBox.setName("Beautiful");
+        assertEquals("Beautiful", rectBox.getName());
+    }
+
+    @Test
+    public void testSetContentBox() throws ColorException {
+        Point2D topLeft = new Point2D(10, 20);
+        Point2D bottomRight = new Point2D(30, 40);
+        Rectangle rect = new Rectangle(topLeft, bottomRight, Color.BLUE);
+        Box<Rectangle> rectBox = new Box<>(rect);
+        rectBox.setContent(rect);
+        assertEquals(rect,rectBox.getContent());
+    }
+
+    @Test
+    public void testSetAndGetContentArrayBox() throws ColorException {
+        String[] strings = {"123", "15345", "3654"};
+        ArrayBox arrayBox = new ArrayBox(strings);
+        assertEquals("123", arrayBox.getElement(0));
+        arrayBox.setContent(strings);
+        assertEquals(strings, arrayBox.getContent());
+        arrayBox.setElement(0, "test");
+        assertEquals("test", arrayBox.getElement(0));
+    }
+
+    @Test
+    public void testSetandGetContentPairBox() throws ColorException {
+        Point2D topLeft = new Point2D(10, 20);
+        Point2D bottomRight = new Point2D(30, 60);
+        Rectangle rect = new Rectangle(topLeft, bottomRight, Color.BLUE);
+        Point2D center = new Point2D(10, 20);
+        Circle circle = new Circle(center, 10, Color.BLUE);
+        PairBox<Rectangle, Circle> pairBox1 = new PairBox<>(rect, circle);
+        PairBox<Circle, Rectangle> pairBox2 = new PairBox<>(circle, rect);
+        pairBox1.setConetentFirst(rect);
+        assertEquals(rect,pairBox1.getConetentFirst());
+        pairBox2.setContentSecond(rect);
+        assertEquals(rect,pairBox2.getContentSecond());
+    }
 }

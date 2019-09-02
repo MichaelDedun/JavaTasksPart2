@@ -247,4 +247,13 @@ public class TestCircle {
         Circle circle3 = CircleFactory.createCircle(new Point2D(10, 20), 1, "BLUE");
         assertEquals(3, CircleFactory.getCircleCount());
     }
+
+    @Test
+    public void testCircleSetRadius() throws ColorException {
+        Circle circle = new Circle(Color.BLUE);
+        circle.setRadius(10);
+        assertEquals(10, circle.getRadius());
+    }
+
+
 }
