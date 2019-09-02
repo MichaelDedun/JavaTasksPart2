@@ -4,6 +4,7 @@ import net.thumbtack.school.colors.Color;
 import net.thumbtack.school.colors.ColorErrorCode;
 import net.thumbtack.school.colors.ColorException;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestTemplate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -255,5 +256,14 @@ public class TestCircle {
         assertEquals(10, circle.getRadius());
     }
 
+    @Test
+    public void testCircleSetCenter() throws ColorException {
+        Circle circle = new Circle(Color.BLUE);
+        Point2D center = new Point2D(10,10);
+        circle.setCenter(center);
+        assertEquals(10, circle.getCenter().getX());
+        assertEquals(10, circle.getCenter().getY());
+
+    }
 
 }

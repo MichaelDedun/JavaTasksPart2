@@ -313,4 +313,11 @@ public class TestRectangle3D {
         assertEquals(10000, rect3D2.getVolume(), DOUBLE_EPS);
     }
 
+    @Test
+    public void testSetHeightRectangle3D() throws ColorException {
+        Rectangle3D rectangle3D = new Rectangle3D(Color.BLUE);
+        rectangle3D.setHeight(10);
+        assertEquals(10, rectangle3D.getHeight());
+    }
+
 }
